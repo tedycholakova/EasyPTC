@@ -31,5 +31,10 @@ namespace EasyPTC.Controllers
         {
             return View(); 
         }
+
+        public ActionResult Test()
+        {
+            return Content("Pesho");
+        }
     }
 }
