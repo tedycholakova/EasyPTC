@@ -5,6 +5,15 @@
 
 @using (Html.BeginForm("Test", "Home", FormMethod.Post))
 {
-    @Html.EditorForModel()
+    @Html.ValidationSummary()
+    <div>
+        @Html.TextBoxFor(m => m.Name, new {@class = "pesho", data_somedata = "somedata" })
+    </div>
+    <div>
+        @Html.TextBoxFor(m => m.Age, new { @class = "pesho", data_somedata = "somedata" }))
+    </div>
     <input type="submit"/>
+
+    //Shows all errors which are for Name
+    @Html.ValidationMessageFor(m => m.Name)
 }
