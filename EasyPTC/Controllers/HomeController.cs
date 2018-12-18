@@ -1,5 +1,6 @@
 ﻿namespace EasyPTC.Controllers
 {
+    using EasyPTC.Models;
     using System.Web.Mvc;
 
     public class HomeController : Controller
@@ -33,9 +34,9 @@
         }
 
         [HttpPost]
-        public ActionResult Test(string name, int age)
+        public ActionResult Test(Person person)
         {
-            return Content(name + age.ToString());
+            return Content($"{person.Name} {person.Age}");
         }
     }
 }
