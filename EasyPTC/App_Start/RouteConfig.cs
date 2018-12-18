@@ -11,18 +11,26 @@ namespace EasyPTC
     {
         public static void RegisterRoutes(RouteCollection routes)
         {
+            //Routes to ignore.The [*] means all left
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
+                //Route name
                 name: "StaticPages",
+                //Root pattern
                 url: "{action}",
-                defaults: new {controller = "Home" }
+                //Default parameters
+                defaults: new { controller = "Home" }
                 );
 
             routes.MapRoute(
                 name: "Default",
+                //Controller: Products; Action: ById; Id: 3
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+                // Id: o(oprional parameter)
+                defaults: new { controller = "Home",
+                                action = "Index",
+                                id = UrlParameter.Optional }
             );
         }
     }
