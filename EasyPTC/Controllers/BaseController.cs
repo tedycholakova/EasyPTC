@@ -1,17 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
-
-namespace EasyPTC.Controllers
+﻿namespace EasyPTC.Controllers
 {
-    public class BaseController : Controller
+    using EasyPTC.Models;
+    using System.Web.Mvc;
+
+    public abstract class BaseController : Controller
     {
-        // GET: Base
-        public ActionResult Index()
+        protected User CurrentUser { get; set; }
+
+        [NonAction]
+        public void SystemSetthings()
         {
-            return View();
+
         }
     }
 }
