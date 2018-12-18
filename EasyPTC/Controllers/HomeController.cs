@@ -23,9 +23,10 @@
             return View();
         }
 
+        [ActionName("Vision")]
         public ActionResult OurVision()
         {
-            return View();
+            return View("OurVision");
         }
         [HttpGet]
         public ActionResult Test()
