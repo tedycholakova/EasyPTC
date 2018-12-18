@@ -24,12 +24,18 @@
 
         public ActionResult OurVision()
         {
-            return View(); 
+            return View();
+        }
+        [HttpGet]
+        public ActionResult Test()
+        {
+            return View();
         }
 
-        public ActionResult Test(string id, string name, string age)
+        [HttpPost]
+        public ActionResult Test(string name, int age)
         {
-            return Content($"id: {id}, name: {name}, age: {age}");
+            return Content(name + age.ToString());
         }
     }
 }
