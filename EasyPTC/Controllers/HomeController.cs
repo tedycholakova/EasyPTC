@@ -36,7 +36,11 @@
         [HttpPost]
         public ActionResult Test(Person person)
         {
-            return Content($"{person.Name} {person.Age}");
+            if (ModelState.IsValid)
+            {
+                return Content($"{person.Name} {person.Age}");
+            }
+            return View(person);
         }
     }
 }
