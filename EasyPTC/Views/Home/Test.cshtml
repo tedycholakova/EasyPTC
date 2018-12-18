@@ -1,0 +1,13 @@
+﻿
+@{
+    ViewBag.Title = "Test";
+}
+
+@using (Html.BeginForm("Test", "Home", FormMethod.Post))
+{
+    <label for=" name">Name</label>
+    <input id="name" type="text" name="name" />
+    <label for="age">Age</label>
+    <input id="age" type="text" name="age" />
+    <input type="submit"/>
+}
