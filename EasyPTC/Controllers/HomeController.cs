@@ -27,9 +27,9 @@
             return View(); 
         }
 
-        public ActionResult Test()
+        public ActionResult Test(string id, string name, string age)
         {
-            return Content("Pesho");
+            return Content($"id: {id}, name: {name}, age: {age}");
         }
     }
 }
